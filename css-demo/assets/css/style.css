@@ -1,0 +1,30 @@
+/*---CSS Demo Style Sheet---*/
+
+/*----Box Sizing-----*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*----Global Styles---*/
+body {
+    margin:0;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+}
+header.primary {
+    background-color:#3b638b;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+    /*---Long Form*/
+    padding-top:40px;
+    padding-right:40px
+    padding-bottom:20px; 
+    padding-left:40px;
+    /*---Short Form---*/
+    padding: 40px 40px 20px 40px;
+    
+}
