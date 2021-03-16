@@ -1,6 +1,6 @@
 /*---CSS Demo Style Sheet---*/
 
-/*----Box Sizing-----*/
+/*-----------Box Sizing----------*/
 html {
   box-sizing: border-box;
 }
@@ -9,13 +9,31 @@ html {
 *:after {
   box-sizing: inherit;
 }
-/*----Global Styles---*/
+
+/*--------------Responsive Images(Adjusts Sizes of All Images)------------*/
+
+img {
+  max-width: 100%;
+  max-height: auto;
+}
+
+/*---------------Utility Classess-------------*/
+
+.container {
+  width:80vw;
+  margin: 40px auto; /* If you want to center something besides text use this technique*/
+}
+
+/*---------------Global Styles----------------*/
+
 body {
     margin:0;
     font-family: Geneva, Tahoma, Verdana, sans-serif;
+    background-color: #FF3B6D;
+    line-height: 1.5;
 }
 header.primary {
-    background-color:#3b638b;
+    background-color:#FFFC54;
     text-align: center;
     color: #ffffff;
     text-shadow: 2px 2px #000000;
@@ -28,3 +46,204 @@ header.primary {
     padding: 40px 40px 20px 40px;
     
 }
+
+header.primary h1 {
+  
+  font-size: 3.2rem;
+  margin: 20px 0; /*Adds space after h1*/
+}
+
+header.primary h1 a {
+  
+  color: #FF00EC;
+  text-decoration: none; /* Removes underline from hyperlink*/
+}
+
+header.primary h2 {
+  
+  font-size: 2rem;
+  /*top, left/right, bottom*/
+  margin: 20px auto 40px;
+  color: #01FF51;
+}
+
+/*----------This section designs navigation links-----------*/
+header.primary nav {
+  
+  width: 80vw;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+header.primary nav ul {
+  
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 0;
+}
+
+header.primary ul li {
+  
+  list-style-type: none; /*Removes bullets next to list items*/
+}
+
+header.primary nav a:link, header.primary nav a:visited {
+  
+  color: #FF00EC;
+  text-decoration: none;
+  background-color: #08FF73;
+  background-color:rgba(0,0,,0,.4); //*Changes background color opacity*/
+  background-size: 25px;
+  padding: 5px 5px; /*Gives text breathing room*/
+  border-radius: 5px 5px; /* Curves borders of hyperlinks*/
+  transition:.2s;
+}
+
+header.primary nav a:hover, header.primary nav a:active {
+  
+  background-color: #8F8CFF;
+}
+
+/*-----Intro design Begins Here----*/
+
+#intro {
+  
+  border: 5px dashed #c0c0c0; /* adds dotted line under inro*/
+  border-color: #57FF0D;
+  padding: 1rem 1rem; /*Makes background larger around text*/
+  background-color: #FFFC54;
+}
+
+#intro h2 {
+  
+  color:#FF00EC;
+  text-shadow: 1px 1px #000;
+  background-color: #00FFFD;
+  padding: 5px 5px;/*Provides space around text*/
+  border-radius: 5px 5px;
+}
+
+#intro p {
+  
+  color:#FF00EC ;
+  text-shadow: .5px .5px #000;
+}
+
+/*-------------------Content Design Begins---------------------*/
+
+/* -------Displays content articles in a row-----------*/
+
+#content {
+  
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #FFFC54;
+  border: 5px dashed #c0c0c0;
+  border-color: #57FF0D;
+  padding: 1rem 1rem;/*Makes background larger around text*/
+  color: #FF00EC;
+  text-shadow: .5px .5px #000;
+}
+
+#content article.post {
+  
+  width: 30%;
+  box-shadow: 0 2px 4px rgba(0,0,0,.4);
+  padding: .7em;/*Provides space around text*/
+  border-radius: 5px 5px;
+  font-size: 1rem;
+}
+
+#content a{
+  
+  background-color: #00FFFD;
+  color:#FF00EC ;
+}
+
+#content .post figure {
+  
+  margin: 0;
+}
+
+#content article.post:hover { /*gives pop out effect when hovering over article*/
+  
+  box-shadow: 0 8px 16px rgba(0,0,0,.4);
+  transition: .2s;
+}
+
+#content article a:hover, #content article a:active {
+  
+  background-color: #8F8CFF;
+  transition: .2s;
+  text-decoration: none;
+}
+
+#content article time, #content article figcaption, #content article footer{
+  
+  font-size: .8rem;
+  text-transform: capitalize; /*Changes appearance of date/time font on article*/
+}
+
+#content article img {
+  
+   border-radius: 5px 5px;
+}
+
+/*--------------------Modifying Sample Items Begins-------------*/
+
+/*This is an attribute selector*/
+aside [role="complementary"] {
+    
+  color: #01FF51;
+  background-color: #FFFC54;
+  padding: 1rem 1rem;/*Makes background larger around text*/
+}
+
+aside .container {  /*Aligns samples side by side*/
+  
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+aside article.widget {
+  width: 40%;
+}
+
+aside a:link, aside a:visited {
+  
+  color: #FF00EC;
+  display:block; /*Puts hyperlink on its on line seperate from text*/
+  margin: 20px; /*puts space between text and hyperling*/
+}
+
+aside footer {
+  
+  display:none; /*hides things that you dont want user to see*/
+}
+
+
+/*This section adjusts the way navigation links display when screen is to small*/
+@media screen and(max-width:690px) {
+
+  header.pimary nav ul{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+  header.primary nav a{
+    display:block;
+}
+  header.primary nav li{
+    margin-bottom: 10px;
+  }
+
+}
+
+  
+  
+  
