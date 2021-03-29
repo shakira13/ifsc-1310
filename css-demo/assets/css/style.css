@@ -24,9 +24,26 @@ img {
   margin: 40px auto; /* If you want to center something besides text use this technique*/
 }
 
+.img-right {
+  
+  float: right;
+  margin: 10px 0 20px 20px;
+  border: 5px dashed #c0c0c0;
+  border-color: #57FF0D;
+}
+
+.img-left {
+  
+  float: left;
+  margin: 10px 0 20px 20px;
+  border: 5px dashed #c0c0c0;
+  border-color: #57FF0D;
+}
+
 /*---------------Global Styles----------------*/
 
 body {
+  
     margin:0;
     font-family: Geneva, Tahoma, Verdana, sans-serif;
     background-color: #FF3B6D;
@@ -123,6 +140,7 @@ header.primary nav a:hover, header.primary nav a:active {
   background-color: #00FFFD;
   padding: 5px 5px;/*Provides space around text*/
   border-radius: 5px 5px;
+  text-decoration: underline;
 }
 
 #intro p {
@@ -213,6 +231,11 @@ aside article.widget {
   width: 40%;
 }
 
+aside a {
+  
+  background-color: #00FFFD;
+}
+
 aside a:link, aside a:visited {
   
   color: #FF00EC;
@@ -225,6 +248,151 @@ aside footer {
   display:none; /*hides things that you dont want user to see*/
 }
 
+#colophon{
+  
+  background-color: #FF3B6D;;
+}
+
+#colophon h6{
+  
+  padding:20px;
+  margin:0;
+  color: #FFFC54; ;
+  text-align:center;
+  font-size:.8rem;
+  text-transform: uppercase;
+}
+
+#additional-elements {
+  
+  border: 5px dashed #c0c0c0;
+  border-color: #57FF0D;
+  padding: 1rem 1rem;
+  background-color: #FFFC54;
+}
+
+#additional-elements h2{
+  
+  color:#FF00EC;
+  text-shadow: 1px 1px #000;
+  background-color: #00FFFD;
+  padding: 5px 5px;/*Provides space around text*/
+  border-radius: 5px 5px;
+  text-decoration: underline;
+}
+
+#additional-elements p {
+  
+  color:#FF00EC ;
+  text-shadow: .5px .5px #000;
+}
+
+#additional-elements a {
+  
+  background-color: #00FFFD;
+}
+
+#additional-elements a:hover, #additional-elements a:active {
+  
+  background-color: #8F8CFF;
+  transition: .2s;
+  text-decoration: none;
+}
+
+#additional-elements h3 {
+  
+  color:#FF00EC;
+  text-shadow: 1px 1px #57FF0D;
+  text-decoration: underline;
+  text-decoration-color: #57FF0D;
+  clear:both;
+  border-left: 8px solid #57FF0D;
+  padding: 10px;
+}
+
+
+#additional-elements h4 {
+  
+  color: #57FF0D;
+  text-shadow: 1px 1px #000;
+  text: bold;
+}
+
+table {
+  
+  width: 100%;
+  border: 1px solid #57FF0D;
+  border-collapse: collapse;
+  margin-bottom: 40px: 
+}
+  
+table caption {
+  
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+  padding-bottom: 5px;
+  font-size: 1.4rem;
+}
+
+table td {
+  
+  border: 1px solid #57FF0D;
+  padding: 5px;
+}
+
+table th {
+  
+  background-color: #57FF0D;
+  width: 33%;
+  padding: 2px;
+}
+
+table tr:nth-child(even) {
+  
+  background-color: #57FF0D;
+}
+
+#additional-elements ol {
+  
+  color: #FFFC54;
+  background: #57FF0D;;
+  padding: 20px;
+  
+}
+
+#additional-elements ol li {
+  background: #FF3B6D;
+  padding: 5px;
+  margin-left: 35px;
+}
+
+#additional-elements ul {
+  
+  color: #FF3B6D;
+  background: #57FF0D;
+  padding: 20px;
+}
+
+#additional-elements dl dt{
+  
+  color: #FF3B6D;
+}
+
+#additional-elements dl dd{
+  
+  color: #57FF0D;
+  background: #FF3B6D;
+}
+
+#additional-elements blockquote {
+  
+  color:#FF00EC ;
+  text-shadow: .5px .5px #000;
+  background: #00FFFD;
+  padding: 30px 40px;
+  border: 2px double #000;
+}
 
 /*This section adjusts the way navigation links display when screen is to small*/
 @media screen and(max-width:690px) {
