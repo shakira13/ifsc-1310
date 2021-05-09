@@ -1,4 +1,10 @@
-  
+/*--Colors---  
+
+#0029FF (blue)
+#DEDEDE (gray)
+
+*/
+
 /*---CSS Demo Style Sheet---*/
 
 /*-----------Box Sizing----------*/
@@ -23,6 +29,7 @@ img {
 .container {
   width:80vw;
   margin: 40px auto; /* If you want to center something besides text use this technique*/
+  max-width: 900px;
 }
 
 .img-right {
@@ -47,13 +54,14 @@ body {
   
     margin:0;
     font-family: Geneva, Tahoma, Verdana, sans-serif;
-    background-color: #FF3B6D;
+    background-color: #000;
     line-height: 1.5;
 }
+
 header.primary {
-    background-color:#FFFC54;
+    background-color:#0029FF;
     text-align: center;
-    color: #ffffff;
+    color: #000000;
     text-shadow: 2px 2px #000000;
     /*---Long Form*/
     padding-top:40px;
@@ -69,20 +77,32 @@ header.primary h1 {
   
   font-size: 3.2rem;
   margin: 20px 0; /*Adds space after h1*/
+  color: #000;
 }
 
 header.primary h1 a {
   
-  color: #FF00EC;
+  color: #000;
+  background-image: url(assets/img/Dragon-Logo.jpg);
+  display:;
+  width: 449px;
+  height: 70px;
+  margin: 0 auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  /*text-shadow: 1px 1px #DEDEDE;
   text-decoration: none; /* Removes underline from hyperlink*/
+  
 }
 
 header.primary h2 {
   
+  font-family: ;
   font-size: 2rem;
   /*top, left/right, bottom*/
   margin: 20px auto 40px;
-  color: #01FF51;
+  color: #DEDEDE;
 }
 
 /*----------This section designs navigation links-----------*/
@@ -100,6 +120,7 @@ header.primary nav ul {
   justify-content: space-between;
   font-size: 20px;
   padding: 0;
+  margin: 20px auto;
 }
 
 header.primary ul li {
@@ -109,10 +130,10 @@ header.primary ul li {
 
 header.primary nav a:link, header.primary nav a:visited {
   
-  color: #FF00EC;
+  color: #000000;
   text-decoration: none;
-  background-color: #08FF73;
-  background-color:rgba(0,0,,0,.4); //*Changes background color opacity*/
+  background-color: #DEDEDE;
+  background-color:rgba(142,166,184,0.4); //*Changes background color opacity*/
   background-size: 25px;
   padding: 5px 5px; /*Gives text breathing room*/
   border-radius: 5px 5px; /* Curves borders of hyperlinks*/
@@ -121,24 +142,34 @@ header.primary nav a:link, header.primary nav a:visited {
 
 header.primary nav a:hover, header.primary nav a:active {
   
-  background-color: #8F8CFF;
+  background-color: #FF0000;
+  background-color:rgba(51,83,107,0.8);
 }
 
 /*-----Intro design Begins Here----*/
 
+section#content {
+  
+  padding: 4em 0;
+  color: #0029FF;
+}
+
 #intro {
   
-  border: 5px dashed #c0c0c0; /* adds dotted line under inro*/
-  border-color: #57FF0D;
+  border: 2px solid #c0c0c0; /* adds dotted line under inro*/
+  border-color: #0029FF;
   padding: 1rem 1rem; /*Makes background larger around text*/
-  background-color: #FFFC54;
+  background-color: #DEDEDE;
+  
 }
 
 #intro h2 {
   
-  color:#FF00EC;
-  text-shadow: 1px 1px #000;
-  background-color: #00FFFD;
+  color:#000;
+  width: 40%;
+  text-shadow: 1px 1px #0029FF;
+  text-align: center;
+  /*background-color: #00FFFD;*/
   padding: 5px 5px;/*Provides space around text*/
   border-radius: 5px 5px;
   text-decoration: underline;
@@ -146,7 +177,7 @@ header.primary nav a:hover, header.primary nav a:active {
 
 #intro p {
   
-  color:#FF00EC ;
+  color: #0029FF;
   text-shadow: .5px .5px #000;
 }
 
@@ -156,24 +187,86 @@ header.primary nav a:hover, header.primary nav a:active {
 
 #content {
   
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #FFFC54;
-  border: 5px dashed #c0c0c0;
-  border-color: #57FF0D;
+  /*background-color: #DEDEDE;
+  border: 5px solid #c0c0c0;
+  border-color: #0029FF;
   padding: 1rem 1rem;/*Makes background larger around text*/
   color: #FF00EC;
   text-shadow: .5px .5px #000;
 }
 
-#content article.post {
-  
+
+
+
+
+section#articles .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #c0c0c0;
+  padding: 0 0 4em 0;
+}
+
+section#articles h2,
+#content h2 {
+  flex: 0 0 100%;
+  color: #0029FF;
+  text-align: center;
+  font-family: "Goldman", cursive;
+  font-size: 2em;
+}
+
+section#articles h2 {
+  color: #0029FF;
+  text-shadow: 2px 2px #000;
+}
+
+#articles article.post {
   width: 30%;
-  box-shadow: 0 2px 4px rgba(0,0,0,.4);
-  padding: .7em;/*Provides space around text*/
-  border-radius: 5px 5px;
-  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  transition: 0.6s;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  background: #fff;
+}
+
+#articles article.post h2 {
+  font-size: 1.5em;
+  text-shadow: none;
+}
+
+#articles article.post:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#articles article time,
+#articles article figcaption,
+#articles article footer {
+  font-size: 0.8em;
+  color: #c0c0c0;
+  text-transform: uppercase;
+}
+
+#articles .post a:link,
+#articles .post a:visited {
+  color: #3b638b;
+}
+
+#articles .post figure {
+  margin: 0;
+}
+
+#articles .post img {
+  border-radius: 10px;
+}
+
+#articles ul {
+  padding: 0 20px;
+}
+#articles li {
+  margin-bottom: 20px;
 }
 
 #content a{
@@ -251,7 +344,7 @@ aside footer {
 
 #colophon{
   
-  background-color: #FF3B6D;;
+  background-color: #0029FF;
 }
 
 #colophon h6{
@@ -264,12 +357,16 @@ aside footer {
   text-transform: uppercase;
 }
 
+colophon#h6 a {
+  color: #FFFC54;
+}
+
 #additional-elements {
   
-  border: 5px dashed #c0c0c0;
-  border-color: #57FF0D;
+  border: 5px solid #c0c0c0;
+  border-color: #0029FF;
   padding: 1rem 1rem;
-  background-color: #FFFC54;
+  background-color: #DEDEDE;
 }
 
 #additional-elements h2{
